@@ -7,12 +7,10 @@ const { createContactMe } = require("../../controllers/mail.controllers.js");
 
 router.post("/contact-me", [createContactMe]);
 router.get("/", (req, res, next) => {
-    res.json({
-        status: 200,
-        data: {
-            message: "calling get api"
-        }
-    })
+    res.render("index", {
+        title: "API server is runnng...",
+        message: "API development!",
+    });
 });
 
 module.exports = router;
