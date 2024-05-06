@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer')
 
 exports.sendEmail = async (data) => {
-    console.log(data)
+    // console.log(data)
 
     const transporter = nodemailer.createTransport({
         host: process.env.MAILTRAP_SMTP_HOST,
@@ -29,9 +29,9 @@ exports.sendEmail = async (data) => {
         // Message sent: <d786aa62-4e0a-070a-47ed-0b0666549519@ethereal.email>
 
     } catch (error) {
-        console.log(
-            "Email service failed silently. Make sure you have provided your MAILTRAP credentials in the .env file"
-        );
+        // console.log(
+        //     "Email service failed silently. Make sure you have provided your MAILTRAP credentials in the .env file"
+        // );
         console.log("Error: ", error);
     }
 
