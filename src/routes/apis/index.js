@@ -9,7 +9,7 @@ router.post("/contact-me", [createContactMe]);
 router.get("/", (req, res, next) => {
     res.render("index", {
         title: "API server is runnng...",
-        message: "API development!",
+        message: "API development => /api/v1",
     });
 });
 
