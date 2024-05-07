@@ -9,7 +9,7 @@ var cors = require("cors");
 var bodyParser = require("body-parser");
 
 var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
+// var usersRouter = require("./routes/users");
 const apisRouter = require("./routes/apis/index");
 
 const serverless = require("serverless-http");
