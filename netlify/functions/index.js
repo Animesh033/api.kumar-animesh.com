@@ -70,9 +70,27 @@ app.use(function (err, req, res, next) {
 // module.exports = app;
 
 // module.exports.handler = serverless(app);
+var port = normalizePort(process.env.PORT || "3000");
+app.set("port", port);
 
 var server = http.createServer(app);
 server.listen(port);
 
 module.exports.handler = serverless(server)
 // module.exports.handler = app
+
+function normalizePort(val) {
+    var port = parseInt(val, 10);
+
+    if (isNaN(port)) {
+        // named pipe
+        return val;
+    }
+
+    if (port >= 0) {
+        // port number
+        return port;
+    }
+
+    return false;
+}
