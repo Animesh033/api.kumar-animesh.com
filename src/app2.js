@@ -1,14 +1,11 @@
-import 'dotenv/config'
 // require('dotenv').config()
-// var createError = require("http-errors");
-
+import 'dotenv/config'
 import createError from 'http-errors';
-
+// var createError = require("http-errors");
 // var express = require("express");
 import express from 'express'
-import path from 'path';
-import { fileURLToPath } from 'url';
 // var path = require("path");
+import path from 'path'
 // var cookieParser = require("cookie-parser");
 import cookieParser from 'cookie-parser';
 // var logger = require("morgan");
@@ -18,18 +15,22 @@ import helmet from 'helmet'
 // var cors = require("cors");
 import cors from 'cors'
 // var bodyParser = require("body-parser");
+
 import bodyParser from 'body-parser';
+
+import { fileURLToPath } from 'url';
 
 import ejs from 'ejs'
 // var indexRouter = require("./routes/index");
 // var usersRouter = require("./routes/users");
 // const apisRouter = require("./routes/api/index");
 
-// const serverless = require("serverless-http");
-
 import indexRouter from './routes/index.js'
 import usersRouter from './routes/users.js'
 import apisRouter from './routes/api/index.js'
+
+// const serverless = require("serverless-http");
+
 
 var app = express();
 
@@ -42,6 +43,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // view engine setup
 const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
 const __dirname = path.dirname(__filename); // get the name of the directory
+console.log(__dirname)
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
@@ -87,6 +89,6 @@ app.use(function (err, req, res, next) {
 
 // module.exports = app;
 
-export default app
-
 // module.exports.handler = serverless(app);
+export default app
+// export const handler = serverless(app);
