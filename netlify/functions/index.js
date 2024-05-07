@@ -1,7 +1,7 @@
 // const serverless = require("serverless-http");
 // const app = require('../../src/app')
 
-import serverless from 'serverless'
+import serverless from "serverless-http";
 import app from '../../src/app2'
 
 // const handler = serverless(app)
