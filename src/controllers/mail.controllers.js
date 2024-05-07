@@ -1,6 +1,8 @@
-const { sendEmail } = require('../utils/mail')
+// const { sendEmail } = require('../utils/mail')
 
-exports.createContactMe = async (req, res, next) => {
+import { sendEmail } from '../utils/mail.js';
+
+export const createContactMe = async (req, res, next) => {
 
     const data = req.body
 

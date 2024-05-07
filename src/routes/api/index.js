@@ -1,8 +1,10 @@
-const express = require("express");
+// const express = require("express");
+import express from 'express'
 // const nodemailer = require("nodemailer");
 const router = express.Router();
 
-const { createContactMe } = require("../../controllers/mail.controllers.js");
+// const { createContactMe } = require("../../controllers/mail.controllers.js");
+import { createContactMe } from '../../controllers/mail.controllers.js'
 
 
 router.post("/contact-me", [createContactMe]);
@@ -17,4 +19,5 @@ router.get("/", (req, res, next) => {
     })
 });
 
-module.exports = router;
+// module.exports = router;
+export default router
