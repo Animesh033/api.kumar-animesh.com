@@ -10,7 +10,7 @@ var bodyParser = require("body-parser");
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
-const apisRouter = require("./routes/apis/index");
+const apisRouter = require("./routes/api/index");
 
 const serverless = require("serverless-http");
 
@@ -36,7 +36,8 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 // app.use("/users", usersRouter);
-app.use("/api/v1", apisRouter);
+// app.use("/api/v1", apisRouter);
+api.use('/.netlify/functions/api/v1', apisRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
