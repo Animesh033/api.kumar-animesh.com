@@ -41,11 +41,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // view engine setup
-const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
-const __dirname = path.dirname(__filename); // get the name of the directory
-console.log(__dirname)
+// console.log("URL : ", import.meta.url)
+// const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
+// const __dirname = path.dirname(__filename); // get the name of the directory
+// console.log(__dirname, __filename)
 
-app.set("views", path.join(__dirname, "views"));
+app.set("views", "./views");
 app.set("view engine", "ejs");
 app.engine('ejs', ejs.__express);
 
@@ -53,7 +54,7 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static("../public"));
 
 app.use("/", indexRouter);
 // app.use("/users", usersRouter);
