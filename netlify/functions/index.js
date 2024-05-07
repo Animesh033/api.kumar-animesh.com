@@ -8,9 +8,9 @@ const helmet = require("helmet");
 var cors = require("cors");
 var bodyParser = require("body-parser");
 
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
-const apisRouter = require("./routes/api/index");
+var indexRouter = require("../../src/routes/index");
+// var usersRouter = require("../../src/routes/users");
+const apisRouter = require("../../src/routes/api/index");
 
 const serverless = require("serverless-http");
 
