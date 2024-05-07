@@ -46,7 +46,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // const __dirname = path.dirname(__filename); // get the name of the directory
 // console.log(__dirname, __filename)
 
-app.set("views", "./views");
+app.set("views", "views");
 app.set("view engine", "ejs");
 app.engine('ejs', ejs.__express);
 
