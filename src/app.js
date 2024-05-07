@@ -9,7 +9,7 @@ var cors = require("cors");
 var bodyParser = require("body-parser");
 
 var indexRouter = require("./routes/index");
-// var usersRouter = require("./routes/users");
+var usersRouter = require("./routes/users");
 const apisRouter = require("./routes/apis/index");
 
 const serverless = require("serverless-http");
@@ -24,9 +24,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // view engine setup
-// app.set("views", path.join(__dirname, "views"));
-// app.set("view engine", "ejs");
-// app.engine('ejs', require('ejs').__express);
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
+app.engine('ejs', require('ejs').ejs.renderFile);
 
 app.use(logger("dev"));
 app.use(express.json());
