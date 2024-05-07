@@ -8,4 +8,4 @@ import app from '../../src/app2'
 // module.exports.handler = handler
 // module.exports.handler = app
 
-export const handler = serverless(api);
+export const handler = serverless(app);
