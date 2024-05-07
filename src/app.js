@@ -26,6 +26,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
+app.engine('ejs', require('ejs').__express);
 
 // app.use(logger("dev"));
 app.use(express.json());
