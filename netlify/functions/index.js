@@ -70,6 +70,8 @@ app.use(function (err, req, res, next) {
 
 // module.exports.handler = serverless(app);
 
+var server = http.createServer(app);
+server.listen(port);
 
-module.exports.handler = serverless(app)
+module.exports.handler = serverless(server)
 // module.exports.handler = app
