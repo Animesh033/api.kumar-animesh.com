@@ -62,7 +62,7 @@ app.use("/", indexRouter);
 
 const router = express.Router();
 
-router.get("/getServer", (req, res, next) => {
+router.get("/get-server", (req, res, next) => {
   res.json({
     status: 200,
     message: "API server is running..."
