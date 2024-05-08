@@ -2,7 +2,7 @@
 // const app = require('../../src/app')
 
 // import serverless from "serverless-http";
-import { handler } from '../../bin/ww2.js'
+import { handler } from '../../bin/www2.js'
 
 // const handler = serverless(app)
 // module.exports.handler = handler
