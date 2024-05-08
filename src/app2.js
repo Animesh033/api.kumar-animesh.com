@@ -62,14 +62,16 @@ app.use("/", indexRouter);
 
 const router = express.Router();
 
-router.get("/api/v1", (req, res, next) => {
+router.get("/getServer", (req, res, next) => {
   res.json({
     status: 200,
     message: "API server is running..."
   })
 });
 
-router.use('/.netlify/functions/index/', router)
+router.use('/api/v1', router)
+
+app.use(router)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
