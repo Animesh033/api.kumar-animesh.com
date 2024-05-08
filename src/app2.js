@@ -69,9 +69,9 @@ router.get("/get-server", (req, res, next) => {
   })
 });
 
-router.use('/api/v1', router)
+// router.use('/api/v1', router)
 
-app.use(router)
+app.use('/.netlify/functions/', router);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

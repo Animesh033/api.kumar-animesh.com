@@ -8,4 +8,4 @@ import { handler } from '../../src/app2.js'
 // module.exports.handler = handler
 // module.exports.handler = app
 
-export const handler = handler
+export default handler
