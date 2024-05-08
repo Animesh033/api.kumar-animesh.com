@@ -17,6 +17,7 @@ import cors from 'cors'
 // var bodyParser = require("body-parser");
 
 import bodyParser from 'body-parser';
+import serverless from "serverless-http";
 
 import { fileURLToPath } from 'url';
 
@@ -94,4 +95,4 @@ app.use(function (err, req, res, next) {
 
 // module.exports.handler = serverless(app);
 export default app
-// export const handler = serverless(app);
+export const handler = serverless(app);
