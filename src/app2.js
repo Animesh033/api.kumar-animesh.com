@@ -62,7 +62,12 @@ app.use("/", indexRouter);
 
 const router = express.Router();
 
-app.use("/api/v1", apisRouter);
+router.get("/api/v1", (req, res, next) => {
+  res.json({
+    status: 200,
+    message: "API server is running..."
+  })
+});
 
 router.use('/.netlify/functions/index/', router)
 
