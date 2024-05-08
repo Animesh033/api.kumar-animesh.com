@@ -62,9 +62,9 @@ app.use("/", indexRouter);
 
 const router = express.Router();
 
-// router.use("/api/v1", apisRouter);
+app.use("/api/v1", apisRouter);
 
-router.use('/.netlify/functions/index/', apisRouter)
+router.use('/.netlify/functions/index/', router)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
