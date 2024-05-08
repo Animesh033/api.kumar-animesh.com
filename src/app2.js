@@ -60,7 +60,7 @@ app.use(express.static("../public"));
 app.use("/", indexRouter);
 // app.use("/users", usersRouter);
 app.use("/api/v1", apisRouter);
-app.use('/.netlify/functions/index', apisRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -94,5 +94,5 @@ app.use(function (err, req, res, next) {
 // module.exports = app;
 
 // module.exports.handler = serverless(app);
-const handler = serverless(app);
-export default handler
+export const handler = serverless(app);
+export default app
