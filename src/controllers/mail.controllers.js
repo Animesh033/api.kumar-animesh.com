@@ -4,7 +4,7 @@ import { sendEmail } from '../utils/mail.js';
 
 export const createContactMe = async (req, res, next) => {
 
-    const data = req.body
+    const data = req?.body || {}
 
     if (Object.keys(data).length === 0) {
         res.json({
