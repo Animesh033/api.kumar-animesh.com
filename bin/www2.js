@@ -12,6 +12,7 @@
 import app from '../src/app2.js'
 import debugg from 'debug';
 import http from 'http'
+import serverless from "serverless-http";
 
 var debug = debugg("api.kumar-animesh.com:server")
 
@@ -31,6 +32,8 @@ var server = http.createServer(app);
 /**
  * Listen on provided port, on all network interfaces.
  */
+
+export const handler = serverless(server);
 
 server.listen(port);
 server.on("error", onError);
